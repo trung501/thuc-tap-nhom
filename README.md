@@ -1,2 +1,2 @@
-# Th-c-t-p-nh-m
+# Thực tập nhóm
 Quản lý tiêm chủng
