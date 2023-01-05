@@ -177,7 +177,7 @@
             this.btnClose.TabIndex = 48;
             this.btnClose.TabStop = false;
             this.btnClose.Zoom = 10;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+
             // 
             // btnClose_
             // 
@@ -203,7 +203,7 @@
             this.btnClose_.Size = new System.Drawing.Size(203, 40);
             this.btnClose_.TabIndex = 48;
             this.btnClose_.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnClose_.Click += new System.EventHandler(this.btnClose__Click);
+
             // 
             // groupBox2
             // 
@@ -407,7 +407,7 @@
             this.txbPhoneNumber.Size = new System.Drawing.Size(203, 29);
             this.txbPhoneNumber.TabIndex = 24;
             this.txbPhoneNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txbPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPhoneNumber_KeyPress);
+           
             // 
             // label14
             // 
@@ -512,7 +512,7 @@
             this.dpkDateCheckOut.Size = new System.Drawing.Size(202, 29);
             this.dpkDateCheckOut.TabIndex = 54;
             this.dpkDateCheckOut.Value = new System.DateTime(2018, 2, 23, 23, 29, 57, 962);
-            this.dpkDateCheckOut.onValueChanged += new System.EventHandler(this.dpkDateCheckOut_onValueChanged);
+            
             // 
             // dpkDateCheckIn
             // 
@@ -528,7 +528,7 @@
             this.dpkDateCheckIn.Size = new System.Drawing.Size(202, 29);
             this.dpkDateCheckIn.TabIndex = 53;
             this.dpkDateCheckIn.Value = new System.DateTime(2018, 2, 23, 23, 29, 57, 962);
-            this.dpkDateCheckIn.onValueChanged += new System.EventHandler(this.dpkDateCheckIn_onValueChanged);
+
             // 
             // dpkDateOfBirth
             // 
@@ -585,7 +585,7 @@
             this.bunifuThinButton21.Size = new System.Drawing.Size(203, 40);
             this.bunifuThinButton21.TabIndex = 51;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
+
             // 
             // txbDays
             // 
@@ -640,7 +640,7 @@
             this.bunifuThinButton22.Size = new System.Drawing.Size(203, 40);
             this.bunifuThinButton22.TabIndex = 58;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
+
             // 
             // bunifuThinButton23
             // 
@@ -666,7 +666,7 @@
             this.bunifuThinButton23.Size = new System.Drawing.Size(203, 40);
             this.bunifuThinButton23.TabIndex = 52;
             this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton23.Click += new System.EventHandler(this.bunifuThinButton23_Click);
+
             // 
             // fBookRoomDetails
             // 
