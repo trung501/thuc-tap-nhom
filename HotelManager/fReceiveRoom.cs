@@ -32,5 +32,17 @@ namespace HotelManager
             LoadData();
 
         }
+        public void LoadData()
+        {
+            LoadListRoomType();
+            LoadReceiveRoomInfo();
+        }
+        public void LoadListRoomType()
+        {
+            List<RoomType> rooms = RoomTypeDAO.Instance.LoadListRoomType();
+            cbRoomType.DataSource = rooms;
+            cbRoomType.DisplayMember = "Name";
+        }
     }
+
 }
