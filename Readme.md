@@ -1,1 +1,1 @@
-test
+Quản lý khách sạn
