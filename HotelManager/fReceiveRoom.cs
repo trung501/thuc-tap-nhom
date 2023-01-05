@@ -43,6 +43,29 @@ namespace HotelManager
             cbRoomType.DataSource = rooms;
             cbRoomType.DisplayMember = "Name";
         }
+        public void LoadEmptyRoom(int idRoomType)
+        {
+            List<Room> rooms = RoomDAO.Instance.LoadEmptyRoom(idRoomType);
+            cbRoom.DataSource = rooms;
+            cbRoom.DisplayMember = "Name";
+        }
+        public bool IsIDBookRoomExists(int idBookRoom)
+        {
+            return BookRoomDAO.Instance.IsIDBookRoomExists(idBookRoom);
+        }
+        public void ShowBookRoomInfo(int idBookRoom)
+        {
+            DataRow dataRow = BookRoomDAO.Instance.ShowBookRoomInfo(idBookRoom);
+            txbFullName.Text = dataRow["FullName"].ToString();
+            txbIDCard.Text = dataRow["IDCard"].ToString();
+            txbRoomTypeName.Text = dataRow["RoomTypeName"].ToString();
+            cbRoomType.Text = dataRow["RoomTypeName"].ToString();//*
+            txbDateCheckIn.Text = dataRow["DateCheckIn"].ToString().Split(' ')[0];
+            dateCheckIn = (DateTime)dataRow["DateCheckIn"];
+            txbDateCheckOut.Text = dataRow["DateCheckOut"].ToString().Split(' ')[0];
+            txbAmountPeople.Text = dataRow["LimitPerson"].ToString();
+            txbPrice.Text = dataRow["Price"].ToString();
+        }
     }
 
 }
