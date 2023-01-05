@@ -1,1 +1,1 @@
-test QLKS
+Quản lý khách sạn
