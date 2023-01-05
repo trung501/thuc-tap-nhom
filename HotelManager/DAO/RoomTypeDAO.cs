@@ -11,6 +11,5 @@ namespace HotelManager.DAO
     public class RoomTypeDAO
     {
       
-
     }
 }
