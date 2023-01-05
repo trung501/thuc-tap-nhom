@@ -16,6 +16,21 @@ namespace HotelManager
     
     public partial class fReceiveRoom : Form
     {
-        
+        List<int> ListIDCustomer = new List<int>();
+        int IDBookRoom = -1;
+        DateTime dateCheckIn;
+        public fReceiveRoom(int idBookRoom)
+        {
+            IDBookRoom = idBookRoom;
+            InitializeComponent();
+            LoadData();
+            ShowBookRoomInfo(IDBookRoom);
+        }
+        public fReceiveRoom()
+        {
+            InitializeComponent();
+            LoadData();
+
+        }
     }
 }
