@@ -122,5 +122,24 @@ namespace HotelManager
         }
 
         #endregion
+
+        #region Form
+        private void FReport_Load(object sender, EventArgs e)
+        {
+            LoadFullReport(DateTime.Now.Month, DateTime.Now.Year);
+            comboBoxMonth.Text = DateTime.Now.Month.ToString();
+            numericYear.Value = DateTime.Now.Year;
+        }
+        #endregion
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void numericYear_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
