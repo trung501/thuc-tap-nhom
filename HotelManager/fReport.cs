@@ -77,5 +77,29 @@ namespace HotelManager
         }
 
         #endregion
+
+        #region Data
+        private DataTable GetFulReport(int month, int year)
+        {
+            return ReportDAO.Instance.LoadFullReport(month, year);
+        }
+
+        #endregion
+
+        #region Chart
+        private void DrawChart(BindingSource source)
+        {
+            chartReport.DataSource = source;
+            chartReport.DataBind();
+            foreach (DataPoint item in chartReport.Series[0].Points)
+            {
+                if (item.YValues[0] == 0)
+                {
+                    item.Label = " ";
+                }
+            }
+        }
+        #endregion
+
     }
 }
