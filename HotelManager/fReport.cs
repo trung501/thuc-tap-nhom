@@ -101,5 +101,26 @@ namespace HotelManager
         }
         #endregion
 
+        #region Change Price
+        private void ChangePrice(DataTable table)
+        {
+            table.Columns.Add("value_New", typeof(string));
+            table.Columns.Add("rate_New", typeof(string));
+            int sum = 0;
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                int node = ((int)table.Rows[i]["value"]);
+                table.Rows[i]["value_New"] = node.ToString("C0", CultureInfo.CreateSpecificCulture("vi-VN"));
+                table.Rows[i]["rate_New"] = (((double)table.Rows[i]["rate"]) / 100).ToString("#0.##%");
+                sum += node;
+            }
+            table.Columns.Remove("value");
+            DataRow row = table.NewRow();
+            table.Columns["value_new"].ColumnName = "value";
+            row["value"] = sum.ToString("C0", CultureInfo.CreateSpecificCulture("vi-VN"));
+            table.Rows.Add(row);
+        }
+
+        #endregion
     }
 }
