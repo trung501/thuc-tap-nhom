@@ -18,6 +18,11 @@ namespace HotelManager.DAO
         {
             return DataProvider.Instance.ExecuteQuery("USP_LoadFullParameter");
         }
+        internal DataTable Search(string text)
+        {
+            string query = "USP_SearchParameter @string";
+            return DataProvider.Instance.ExecuteQuery(query, new object[] { text });
+        }
         #endregion
 
     }
