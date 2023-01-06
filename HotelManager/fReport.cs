@@ -32,5 +32,50 @@ namespace HotelManager
             GC.Collect();
         }
         #endregion
+
+        #region Click
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            LoadFullReport(int.Parse(comboBoxMonth.Text), (int)(numericYear.Value));
+        }
+        private void ToolStripLabel1_Click(object sender, EventArgs e)
+        {
+            saveReport.FileName = "Doanh thu tháng " + month + '-' + year;
+            if (saveReport.ShowDialog() == DialogResult.Cancel)
+                return;
+            else
+            {
+                bool check;
+                try
+                {
+                    switch (saveReport.FilterIndex)
+                    {
+                        case 2:
+                            check = ExportToExcel.Instance.Export(dataGridReport, saveReport.FileName, ModeExportToExcel.XLSX);
+                            break;
+                        case 3:
+                            check = ExportToExcel.Instance.Export(dataGridReport, saveReport.FileName, ModeExportToExcel.PDF);
+                            break;
+                        default:
+                            check = ExportToExcel.Instance.Export(dataGridReport, saveReport.FileName, ModeExportToExcel.XLS);
+                            break;
+                    }
+                    if (check)
+                        MessageBox.Show("Xuất thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("Lỗi xuất thất bại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch
+                {
+                    MessageBox.Show("Lỗi (Cần cài đặt Office)", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        #endregion
     }
 }
