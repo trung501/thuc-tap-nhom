@@ -14,6 +14,14 @@ namespace HotelManager
 {
     public partial class fAddCustomer : Form
     {
-       
+        private void btnAddCustomer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose__Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
