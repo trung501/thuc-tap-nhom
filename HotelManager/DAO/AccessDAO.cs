@@ -25,6 +25,23 @@ namespace HotelManager.DAO
             string query = "USP_LoadFullAccessRest @idStaffType";
             return DataProvider.Instance.ExecuteQuery(query, new object[] { idStaffType });
         }
+        internal void Insert(object idJob, int idStaffType)
+        {
+            string query = "USP_InsertAccess @idjob , @idStafftype";
+            DataProvider.Instance.ExecuteNoneQuery(query, new object[] { idJob, idStaffType });
+        }
 
+        internal void Delete(int idJob, int idStaffType)
+        {
+            if (idJob == 6 && idStaffType == 1) return;
+            string query = "USP_DeleteAccess @idjob , @idStafftype";
+            DataProvider.Instance.ExecuteNoneQuery(query, new object[] { idJob, idStaffType });
+        }
+
+        internal bool CheckAccess(string username, string formName)
+        {
+            string query = "USP_ChekcAccess @username , @formname";
+            return !(DataProvider.Instance.ExecuteScalar(query, new object[] { username, formName }) is null);
+        }
     }
 }
