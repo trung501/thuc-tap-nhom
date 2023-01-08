@@ -1,4 +1,4 @@
-﻿using HotelManager.DAO;
+using HotelManager.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -77,4 +77,5 @@ namespace HotelManager
 
           }
      }
+
 }

@@ -299,7 +299,7 @@
             this.bunifuThinButton25.Size = new System.Drawing.Size(175, 40);
             this.bunifuThinButton25.TabIndex = 55;
             this.bunifuThinButton25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton25.Click += new System.EventHandler(this.btnClose_Click);
+          
             // 
             // btnInsertStaffType
             // 
@@ -366,7 +366,7 @@
             this.cbbStaffType.UseCustomForeColor = true;
             this.cbbStaffType.UseSelectable = true;
             this.cbbStaffType.UseStyleColors = true;
-            this.cbbStaffType.SelectedIndexChanged += new System.EventHandler(this.cbbStaffType_SelectedIndexChanged);
+           
             // 
             // label5
             // 
@@ -403,8 +403,7 @@
             this.btnDelete.Size = new System.Drawing.Size(175, 40);
             this.btnDelete.TabIndex = 53;
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
+          
             // bunifuThinButton22
             // 
             this.bunifuThinButton22.ActiveBorderThickness = 1;
@@ -429,7 +428,7 @@
             this.bunifuThinButton22.Size = new System.Drawing.Size(39, 40);
             this.bunifuThinButton22.TabIndex = 71;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
+            
             // 
             // bunifuThinButton23
             // 
@@ -455,7 +454,7 @@
             this.bunifuThinButton23.Size = new System.Drawing.Size(39, 40);
             this.bunifuThinButton23.TabIndex = 70;
             this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton23.Click += new System.EventHandler(this.bunifuThinButton23_Click);
+           
             // 
             // bunifuThinButton21
             // 
@@ -481,7 +480,7 @@
             this.bunifuThinButton21.Size = new System.Drawing.Size(39, 40);
             this.bunifuThinButton21.TabIndex = 69;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
+          
             // 
             // btnSearch
             // 
@@ -507,7 +506,7 @@
             this.btnSearch.Size = new System.Drawing.Size(39, 40);
             this.btnSearch.TabIndex = 68;
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSearch.Click += new System.EventHandler(this.BtnBack_Click);
+          
             // 
             // btnClose
             // 
@@ -522,7 +521,7 @@
             this.btnClose.TabIndex = 57;
             this.btnClose.TabStop = false;
             this.btnClose.Zoom = 10;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+           
             // 
             // fAccess
             // 

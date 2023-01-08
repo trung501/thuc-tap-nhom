@@ -142,7 +142,7 @@
             this.txbNationality.BackColor = System.Drawing.Color.White;
             this.txbNationality.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.txbNationality.FormattingEnabled = true;
-            this.txbNationality.ItemHeight = 23;
+            this.txbNationality.ItemHeight = 24;
             this.txbNationality.Items.AddRange(new object[] {
             "Việt Nam",
             "Trung Quốc",
@@ -163,7 +163,7 @@
             "Khác"});
             this.txbNationality.Location = new System.Drawing.Point(216, 211);
             this.txbNationality.Name = "txbNationality";
-            this.txbNationality.Size = new System.Drawing.Size(179, 29);
+            this.txbNationality.Size = new System.Drawing.Size(179, 30);
             this.txbNationality.Style = MetroFramework.MetroColorStyle.Green;
             this.txbNationality.TabIndex = 58;
             this.txbNationality.UseCustomBackColor = true;
@@ -178,7 +178,7 @@
             this.label14.ForeColor = System.Drawing.Color.SeaGreen;
             this.label14.Location = new System.Drawing.Point(216, 77);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(100, 20);
+            this.label14.Size = new System.Drawing.Size(127, 25);
             this.label14.TabIndex = 55;
             this.label14.Text = "Số điện thoại:";
             // 
@@ -215,7 +215,6 @@
             this.txbPhoneNumber.Size = new System.Drawing.Size(175, 29);
             this.txbPhoneNumber.TabIndex = 52;
             this.txbPhoneNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txbPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxbPhoneNumber_KeyPress);
             // 
             // label11
             // 
@@ -224,7 +223,7 @@
             this.label11.ForeColor = System.Drawing.Color.SeaGreen;
             this.label11.Location = new System.Drawing.Point(216, 133);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(58, 20);
+            this.label11.Size = new System.Drawing.Size(74, 25);
             this.label11.TabIndex = 57;
             this.label11.Text = "Địa chỉ:";
             // 
@@ -235,7 +234,7 @@
             this.label12.ForeColor = System.Drawing.Color.SeaGreen;
             this.label12.Location = new System.Drawing.Point(216, 188);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(75, 20);
+            this.label12.Size = new System.Drawing.Size(97, 25);
             this.label12.TabIndex = 56;
             this.label12.Text = "Quốc tịch:";
             // 
@@ -245,14 +244,14 @@
             this.comboBoxSex.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxSex.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.comboBoxSex.FormattingEnabled = true;
-            this.comboBoxSex.ItemHeight = 23;
+            this.comboBoxSex.ItemHeight = 24;
             this.comboBoxSex.Items.AddRange(new object[] {
             "Nam",
             "Nữ",
             "Khác"});
             this.comboBoxSex.Location = new System.Drawing.Point(12, 267);
             this.comboBoxSex.Name = "comboBoxSex";
-            this.comboBoxSex.Size = new System.Drawing.Size(175, 29);
+            this.comboBoxSex.Size = new System.Drawing.Size(175, 30);
             this.comboBoxSex.Style = MetroFramework.MetroColorStyle.Green;
             this.comboBoxSex.TabIndex = 4;
             this.comboBoxSex.UseCustomBackColor = true;
@@ -266,10 +265,10 @@
             this.comboBoxCustomerType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxCustomerType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.comboBoxCustomerType.FormattingEnabled = true;
-            this.comboBoxCustomerType.ItemHeight = 23;
+            this.comboBoxCustomerType.ItemHeight = 24;
             this.comboBoxCustomerType.Location = new System.Drawing.Point(12, 211);
             this.comboBoxCustomerType.Name = "comboBoxCustomerType";
-            this.comboBoxCustomerType.Size = new System.Drawing.Size(175, 29);
+            this.comboBoxCustomerType.Size = new System.Drawing.Size(175, 30);
             this.comboBoxCustomerType.Style = MetroFramework.MetroColorStyle.Green;
             this.comboBoxCustomerType.TabIndex = 3;
             this.comboBoxCustomerType.UseCustomBackColor = true;
@@ -280,10 +279,10 @@
             // comboboxID
             // 
             this.comboboxID.FormattingEnabled = true;
-            this.comboboxID.ItemHeight = 23;
+            this.comboboxID.ItemHeight = 24;
             this.comboboxID.Location = new System.Drawing.Point(12, 44);
             this.comboboxID.Name = "comboboxID";
-            this.comboboxID.Size = new System.Drawing.Size(175, 29);
+            this.comboboxID.Size = new System.Drawing.Size(175, 30);
             this.comboboxID.Style = MetroFramework.MetroColorStyle.Green;
             this.comboboxID.TabIndex = 0;
             this.comboboxID.UseSelectable = true;
@@ -295,7 +294,7 @@
             this.label2.ForeColor = System.Drawing.Color.SeaGreen;
             this.label2.Location = new System.Drawing.Point(12, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 20);
+            this.label2.Size = new System.Drawing.Size(146, 25);
             this.label2.TabIndex = 51;
             this.label2.Text = "Mã khách hàng:";
             // 
@@ -315,8 +314,6 @@
             this.txbFullName.Size = new System.Drawing.Size(175, 29);
             this.txbFullName.TabIndex = 1;
             this.txbFullName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txbFullName.Enter += new System.EventHandler(this.Txb_Enter);
-            this.txbFullName.Leave += new System.EventHandler(this.Txb_Leave);
             // 
             // datepickerDateOfBirth
             // 
@@ -340,7 +337,7 @@
             this.label13.ForeColor = System.Drawing.Color.SeaGreen;
             this.label13.Location = new System.Drawing.Point(12, 244);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(68, 20);
+            this.label13.Size = new System.Drawing.Size(88, 25);
             this.label13.TabIndex = 28;
             this.label13.Text = "Giới tính:";
             // 
@@ -351,7 +348,7 @@
             this.label20.ForeColor = System.Drawing.Color.SeaGreen;
             this.label20.Location = new System.Drawing.Point(12, 188);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(119, 20);
+            this.label20.Size = new System.Drawing.Size(154, 25);
             this.label20.TabIndex = 41;
             this.label20.Text = "Loại khách hàng:";
             // 
@@ -362,7 +359,7 @@
             this.label15.ForeColor = System.Drawing.Color.SeaGreen;
             this.label15.Location = new System.Drawing.Point(12, 133);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(77, 20);
+            this.label15.Size = new System.Drawing.Size(98, 25);
             this.label15.TabIndex = 24;
             this.label15.Text = "Số CMND:";
             // 
@@ -373,7 +370,7 @@
             this.label1.ForeColor = System.Drawing.Color.SeaGreen;
             this.label1.Location = new System.Drawing.Point(216, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 20);
+            this.label1.Size = new System.Drawing.Size(100, 25);
             this.label1.TabIndex = 49;
             this.label1.Text = "Ngày sinh:";
             // 
@@ -393,8 +390,6 @@
             this.txbIDCard.Size = new System.Drawing.Size(175, 29);
             this.txbIDCard.TabIndex = 2;
             this.txbIDCard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txbIDCard.Enter += new System.EventHandler(this.Txb_Enter);
-            this.txbIDCard.Leave += new System.EventHandler(this.Txb_Leave);
             // 
             // label16
             // 
@@ -403,7 +398,7 @@
             this.label16.ForeColor = System.Drawing.Color.SeaGreen;
             this.label16.Location = new System.Drawing.Point(12, 77);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(76, 20);
+            this.label16.Size = new System.Drawing.Size(96, 25);
             this.label16.TabIndex = 22;
             this.label16.Text = "Họ và tên:";
             // 
@@ -449,7 +444,7 @@
             this.dataGridViewCustomer.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewCustomer.GridColor = System.Drawing.Color.White;
-            this.dataGridViewCustomer.Location = new System.Drawing.Point(3, 68);
+            this.dataGridViewCustomer.Location = new System.Drawing.Point(3, 73);
             this.dataGridViewCustomer.Name = "dataGridViewCustomer";
             this.dataGridViewCustomer.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -460,37 +455,40 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewCustomer.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewCustomer.RowHeadersVisible = false;
+            this.dataGridViewCustomer.RowHeadersWidth = 51;
             this.dataGridViewCustomer.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridViewCustomer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.dataGridViewCustomer.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dataGridViewCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewCustomer.Size = new System.Drawing.Size(653, 484);
+            this.dataGridViewCustomer.Size = new System.Drawing.Size(653, 479);
             this.dataGridViewCustomer.TabIndex = 3;
-            this.dataGridViewCustomer.SelectionChanged += new System.EventHandler(this.DataGridViewCustomer_SelectionChanged);
             // 
             // colID
             // 
             this.colID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.colID.DataPropertyName = "id";
             this.colID.HeaderText = "Mã";
+            this.colID.MinimumWidth = 6;
             this.colID.Name = "colID";
             this.colID.ReadOnly = true;
-            this.colID.Width = 57;
+            this.colID.Width = 69;
             // 
             // colNameCustomer
             // 
             this.colNameCustomer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.colNameCustomer.DataPropertyName = "Name";
             this.colNameCustomer.HeaderText = "Tên";
+            this.colNameCustomer.MinimumWidth = 6;
             this.colNameCustomer.Name = "colNameCustomer";
             this.colNameCustomer.ReadOnly = true;
-            this.colNameCustomer.Width = 58;
+            this.colNameCustomer.Width = 70;
             // 
             // colIDCard
             // 
             this.colIDCard.DataPropertyName = "idcard";
             this.colIDCard.FillWeight = 90F;
             this.colIDCard.HeaderText = "Số CMND";
+            this.colIDCard.MinimumWidth = 6;
             this.colIDCard.Name = "colIDCard";
             this.colIDCard.ReadOnly = true;
             this.colIDCard.Width = 90;
@@ -500,6 +498,7 @@
             this.colNameCustomerType.DataPropertyName = "NameCustomerType";
             this.colNameCustomerType.FillWeight = 70F;
             this.colNameCustomerType.HeaderText = "Loại";
+            this.colNameCustomerType.MinimumWidth = 6;
             this.colNameCustomerType.Name = "colNameCustomerType";
             this.colNameCustomerType.ReadOnly = true;
             this.colNameCustomerType.Width = 70;
@@ -509,6 +508,7 @@
             this.colSex.DataPropertyName = "sex";
             this.colSex.FillWeight = 85F;
             this.colSex.HeaderText = "Giới Tính";
+            this.colSex.MinimumWidth = 6;
             this.colSex.Name = "colSex";
             this.colSex.ReadOnly = true;
             this.colSex.Visible = false;
@@ -519,6 +519,7 @@
             this.colDateOfBirth.DataPropertyName = "dateofbirth";
             this.colDateOfBirth.FillWeight = 90F;
             this.colDateOfBirth.HeaderText = "Ngày Sinh";
+            this.colDateOfBirth.MinimumWidth = 6;
             this.colDateOfBirth.Name = "colDateOfBirth";
             this.colDateOfBirth.ReadOnly = true;
             this.colDateOfBirth.Visible = false;
@@ -528,14 +529,17 @@
             // 
             this.colPhone.DataPropertyName = "phoneNumber";
             this.colPhone.HeaderText = "SĐT";
+            this.colPhone.MinimumWidth = 6;
             this.colPhone.Name = "colPhone";
             this.colPhone.ReadOnly = true;
+            this.colPhone.Width = 125;
             // 
             // colAddress
             // 
             this.colAddress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colAddress.DataPropertyName = "address";
             this.colAddress.HeaderText = "Địa Chỉ";
+            this.colAddress.MinimumWidth = 6;
             this.colAddress.Name = "colAddress";
             this.colAddress.ReadOnly = true;
             // 
@@ -544,17 +548,20 @@
             this.colNationality.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.colNationality.DataPropertyName = "nationality";
             this.colNationality.HeaderText = "Quốc Tịch";
+            this.colNationality.MinimumWidth = 6;
             this.colNationality.Name = "colNationality";
             this.colNationality.ReadOnly = true;
-            this.colNationality.Width = 104;
+            this.colNationality.Width = 128;
             // 
             // colIdCustomerType
             // 
             this.colIdCustomerType.DataPropertyName = "idCustomerType";
             this.colIdCustomerType.HeaderText = "";
+            this.colIdCustomerType.MinimumWidth = 6;
             this.colIdCustomerType.Name = "colIdCustomerType";
             this.colIdCustomerType.ReadOnly = true;
             this.colIdCustomerType.Visible = false;
+            this.colIdCustomerType.Width = 125;
             // 
             // groupBox1
             // 
@@ -579,6 +586,7 @@
             this.bindingCustomer.DeleteItem = null;
             this.bindingCustomer.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bindingCustomer.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.bindingCustomer.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.bindingCustomer.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -589,7 +597,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.toolStripLabel1});
-            this.bindingCustomer.Location = new System.Drawing.Point(3, 25);
+            this.bindingCustomer.Location = new System.Drawing.Point(3, 30);
             this.bindingCustomer.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingCustomer.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingCustomer.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -603,7 +611,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(47, 40);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(61, 40);
             this.bindingNavigatorCountItem.Text = "của {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Tổng số khách hàng";
             // 
@@ -638,6 +646,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 25);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -673,10 +682,10 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(34, 40);
+            this.toolStripLabel1.Size = new System.Drawing.Size(45, 40);
             this.toolStripLabel1.Text = "Xuất";
             this.toolStripLabel1.ToolTipText = "Xuất";
-            this.toolStripLabel1.Click += new System.EventHandler(this.ToolStripLabel1_Click);
+            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click_1);
             // 
             // groupBox3
             // 
@@ -699,7 +708,7 @@
             this.cbCustomerSearch.BackColor = System.Drawing.Color.White;
             this.cbCustomerSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbCustomerSearch.FormattingEnabled = true;
-            this.cbCustomerSearch.ItemHeight = 23;
+            this.cbCustomerSearch.ItemHeight = 24;
             this.cbCustomerSearch.Items.AddRange(new object[] {
             "Mã khách hàng",
             "Tên khách hàng",
@@ -707,7 +716,7 @@
             "Số điện thoại"});
             this.cbCustomerSearch.Location = new System.Drawing.Point(16, 68);
             this.cbCustomerSearch.Name = "cbCustomerSearch";
-            this.cbCustomerSearch.Size = new System.Drawing.Size(175, 29);
+            this.cbCustomerSearch.Size = new System.Drawing.Size(175, 30);
             this.cbCustomerSearch.Style = MetroFramework.MetroColorStyle.Green;
             this.cbCustomerSearch.TabIndex = 50;
             this.cbCustomerSearch.UseCustomBackColor = true;
@@ -766,7 +775,6 @@
             this.btnSearch.Size = new System.Drawing.Size(175, 40);
             this.btnSearch.TabIndex = 46;
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // btnCancel
             // 
@@ -793,7 +801,6 @@
             this.btnCancel.TabIndex = 49;
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCancel.Visible = false;
-            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // SaveCustomer
             // 
@@ -840,7 +847,6 @@
             this.btnClose1.TabIndex = 52;
             this.btnClose1.TabStop = false;
             this.btnClose1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnClose1.Click += new System.EventHandler(this.BtnClose1_Click);
             // 
             // btnUpdate
             // 
@@ -867,7 +873,6 @@
             this.btnUpdate.TabIndex = 51;
             this.btnUpdate.TabStop = false;
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // btnAddCustomer
             // 
@@ -894,7 +899,6 @@
             this.btnAddCustomer.TabIndex = 8;
             this.btnAddCustomer.TabStop = false;
             this.btnAddCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAddCustomer.Click += new System.EventHandler(this.BtnAddCustomer_Click);
             // 
             // label6
             // 
@@ -904,7 +908,7 @@
             this.label6.ForeColor = System.Drawing.Color.SeaGreen;
             this.label6.Location = new System.Drawing.Point(9, 6);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(258, 37);
+            this.label6.Size = new System.Drawing.Size(323, 46);
             this.label6.TabIndex = 42;
             this.label6.Text = "Quản Lí Khách Hàng";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -915,6 +919,7 @@
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.bunifuSeparator1.LineThickness = 1;
             this.bunifuSeparator1.Location = new System.Drawing.Point(5, 43);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(1078, 12);
             this.bunifuSeparator1.TabIndex = 56;
@@ -934,11 +939,10 @@
             this.btnClose.TabIndex = 26;
             this.btnClose.TabStop = false;
             this.btnClose.Zoom = 10;
-            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // fCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1088, 614);
@@ -958,7 +962,6 @@
             this.Name = "fCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fCustomer";
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FCustomer_KeyPress);
             this.groupCustomer.ResumeLayout(false);
             this.groupCustomer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomer)).EndInit();
