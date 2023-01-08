@@ -355,6 +355,10 @@ namespace HotelManager
         {
             LoadFullCustomer(GetFullCustomer());
         }
+        private void FCustomer_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            LoadFullCustomer(GetFullCustomer());
+        }
         #endregion
     }
 }

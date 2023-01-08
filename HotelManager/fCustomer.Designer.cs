@@ -774,7 +774,7 @@
             this.btnSearch.Size = new System.Drawing.Size(175, 40);
             this.btnSearch.TabIndex = 46;
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+          
             // 
             // btnCancel
             // 
@@ -847,7 +847,7 @@
             this.btnClose1.TabIndex = 52;
             this.btnClose1.TabStop = false;
             this.btnClose1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnClose1.Click += new System.EventHandler(this.btnClose1_Click);
+            
             // 
             // btnUpdate
             // 
@@ -874,7 +874,7 @@
             this.btnUpdate.TabIndex = 51;
             this.btnUpdate.TabStop = false;
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            
             // 
             // btnAddCustomer
             // 
@@ -901,7 +901,7 @@
             this.btnAddCustomer.TabIndex = 8;
             this.btnAddCustomer.TabStop = false;
             this.btnAddCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
+            
             // 
             // label6
             // 
