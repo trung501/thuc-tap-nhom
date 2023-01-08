@@ -14,6 +14,57 @@ namespace HotelManager
 {
     public partial class fLogin : Form
     {
+        public fLogin()
+        {
+            InitializeComponent();
+        }
+        public bool Login()
+        {
+            MD5 md5 = MD5.Create();
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(txbPassWord.Text);
+
+            // Tạo băm từ mảng byte
+            byte[] hash = md5.ComputeHash(inputBytes);
+
+            // Chuyển kết quả băm thành chuỗi hexadecimal
+            string hashString = BitConverter.ToString(hash).Replace("-", "");
+
+            return AccountDAO.Instance.Login(txbUserName.Text, hashString);
+        }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
        
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
+            if (Login())
+            {
+                this.Hide();
+                fManagement f = new fManagement(txbUserName.Text);
+                f.ShowDialog();
+
+                //txbUserName.Text = String.Empty;
+                //txbPassWord.Text = String.Empty;
+                //txbUserName.Focus();
+
+            }
+            else
+            {
+                MessageBox.Show( "Tên Đăng Nhập không tồn tại hoặc Mật Khẩu không đúng.\nVui lòng nhập lại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnExit__Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void txbPassWord_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                btnLogin_Click_1(sender, null);
+        }
     }
 }
