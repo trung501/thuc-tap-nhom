@@ -48,12 +48,9 @@ namespace HotelManager.DAO
         public bool UpdateReceiveRoom(int id, int idRoom)
         {
             string query = "USP_UpdateReceiveRoom @id , @idRoom";
-            return DataProvider.Instance.ExecuteNoneQuery(query, new object[] { id, idRoom }) > 0;
+            return DataProvider.Instance.ExecuteNoneQuery(query, new object[]{ id, idRoom }) > 0;
         }
-        public static ReceiveRoomDAO Instance
-        {
-            get { if (instance == null) instance = new ReceiveRoomDAO(); return instance; }
-            private set => instance = value;
-        }
+        public static ReceiveRoomDAO Instance { get { if (instance == null) instance = new ReceiveRoomDAO(); return instance; }
+            private set => instance = value; }
     }
 }

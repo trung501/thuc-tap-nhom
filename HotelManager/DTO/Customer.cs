@@ -22,7 +22,7 @@ namespace HotelManager.DTO
         {
 
         }
-        public Customer(int id, string idCard, string name, int idcustomerType, string address, int phoneNumber, string sex, string nationality, DateTime dateOfBirth)
+        public Customer(int id,string idCard, string name, int idcustomerType, string address, int phoneNumber, string sex, string nationality,DateTime dateOfBirth)
         {
             this.Id = id;
             this.IdCard = idCard;
@@ -36,10 +36,10 @@ namespace HotelManager.DTO
         }
         public Customer(DataRow row)
         {
-            this.Id = (int)row["id"];
+            this.Id= (int)row["id"];
             this.IdCard = row["idcard"].ToString();
             this.Name = row["Name"].ToString();
-            this.IdCustomerType = (int)row["idcustomerType"];
+            this.IdCustomerType =(int)row["idcustomerType"];
             this.DateOfBirth = (DateTime)row["DateOfBirth"];
             this.Address = row["address"].ToString();
             this.PhoneNumber = (int)row["phoneNumber"];

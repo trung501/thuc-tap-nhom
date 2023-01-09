@@ -1,33 +1,33 @@
 ﻿namespace HotelManager
 {
-     partial class fManagement
-     {
-          /// <summary>
-          /// Required designer variable.
-          /// </summary>
-          private System.ComponentModel.IContainer components = null;
+    partial class fManagement
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-          /// <summary>
-          /// Clean up any resources being used.
-          /// </summary>
-          /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-          protected override void Dispose(bool disposing)
-          {
-               if (disposing && (components != null))
-               {
-                    components.Dispose();
-               }
-               base.Dispose(disposing);
-          }
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-          #region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-          /// <summary>
-          /// Required method for Designer support - do not modify
-          /// the contents of this method with the code editor.
-          /// </summary>
-          private void InitializeComponent()
-          {
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
                this.components = new System.ComponentModel.Container();
                System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fManagement));
                this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -80,10 +80,10 @@
                this.panelRight.Controls.Add(this.btnClose);
                this.panelRight.Controls.Add(this.titleBookRoom);
                this.panelRight.Dock = System.Windows.Forms.DockStyle.Fill;
-               this.panelRight.Location = new System.Drawing.Point(248, 0);
+               this.panelRight.Location = new System.Drawing.Point(268, 0);
                this.panelRight.Margin = new System.Windows.Forms.Padding(4);
                this.panelRight.Name = "panelRight";
-               this.panelRight.Size = new System.Drawing.Size(1240, 718);
+               this.panelRight.Size = new System.Drawing.Size(1220, 718);
                this.panelRight.TabIndex = 1;
                this.panelRight.Paint += new System.Windows.Forms.PaintEventHandler(this.panelRight_Paint);
                // 
@@ -284,7 +284,7 @@
                // 
                this.label2.AutoSize = true;
                this.label2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-               this.label2.ForeColor = System.Drawing.Color.SeaGreen;
+               this.label2.ForeColor = System.Drawing.Color.Brown;
                this.label2.Location = new System.Drawing.Point(28, 9);
                this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
                this.label2.Name = "label2";
@@ -298,7 +298,7 @@
                this.btnClose.BackColor = System.Drawing.Color.Transparent;
                this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
                this.btnClose.ImageActive = null;
-               this.btnClose.Location = new System.Drawing.Point(1209, 9);
+               this.btnClose.Location = new System.Drawing.Point(1189, 9);
                this.btnClose.Margin = new System.Windows.Forms.Padding(4);
                this.btnClose.Name = "btnClose";
                this.btnClose.Size = new System.Drawing.Size(21, 20);
@@ -330,6 +330,7 @@
                // 
                // panelLeft
                // 
+               this.panelLeft.BackColor = System.Drawing.Color.Brown;
                this.panelLeft.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelLeft.BackgroundImage")));
                this.panelLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
                this.panelLeft.Controls.Add(this.btnLogOut);
@@ -338,26 +339,26 @@
                this.panelLeft.Controls.Add(this.btnIntroduce);
                this.panelLeft.Controls.Add(this.bunifuFlatButton1);
                this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
-               this.panelLeft.GradientBottomLeft = System.Drawing.Color.SeaGreen;
-               this.panelLeft.GradientBottomRight = System.Drawing.Color.SeaGreen;
-               this.panelLeft.GradientTopLeft = System.Drawing.Color.SeaGreen;
-               this.panelLeft.GradientTopRight = System.Drawing.Color.SeaGreen;
+               this.panelLeft.GradientBottomLeft = System.Drawing.Color.Brown;
+               this.panelLeft.GradientBottomRight = System.Drawing.Color.Brown;
+               this.panelLeft.GradientTopLeft = System.Drawing.Color.Brown;
+               this.panelLeft.GradientTopRight = System.Drawing.Color.Brown;
                this.panelLeft.Location = new System.Drawing.Point(0, 0);
                this.panelLeft.Margin = new System.Windows.Forms.Padding(4);
                this.panelLeft.Name = "panelLeft";
                this.panelLeft.Quality = 10;
-               this.panelLeft.Size = new System.Drawing.Size(248, 718);
+               this.panelLeft.Size = new System.Drawing.Size(268, 718);
                this.panelLeft.TabIndex = 0;
                this.panelLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLeft_Paint);
                // 
                // btnLogOut
                // 
-               this.btnLogOut.Activecolor = System.Drawing.Color.SeaGreen;
+               this.btnLogOut.Activecolor = System.Drawing.Color.Brown;
                this.btnLogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-               this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+               this.btnLogOut.BackColor = System.Drawing.Color.Brown;
                this.btnLogOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
                this.btnLogOut.BorderRadius = 0;
-               this.btnLogOut.ButtonText = "      Đăng Xuất";
+               this.btnLogOut.ButtonText = "          Đăng Xuất";
                this.btnLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
                this.btnLogOut.DisabledColor = System.Drawing.Color.Gray;
                this.btnLogOut.Iconcolor = System.Drawing.Color.Transparent;
@@ -375,13 +376,13 @@
                this.btnLogOut.Location = new System.Drawing.Point(0, 612);
                this.btnLogOut.Margin = new System.Windows.Forms.Padding(5);
                this.btnLogOut.Name = "btnLogOut";
-               this.btnLogOut.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-               this.btnLogOut.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+               this.btnLogOut.Normalcolor = System.Drawing.Color.Brown;
+               this.btnLogOut.OnHovercolor = System.Drawing.Color.Brown;
                this.btnLogOut.OnHoverTextColor = System.Drawing.Color.White;
                this.btnLogOut.selected = false;
                this.btnLogOut.Size = new System.Drawing.Size(257, 49);
                this.btnLogOut.TabIndex = 7;
-               this.btnLogOut.Text = "      Đăng Xuất";
+               this.btnLogOut.Text = "          Đăng Xuất";
                this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
                this.btnLogOut.Textcolor = System.Drawing.Color.White;
                this.btnLogOut.TextFont = new System.Drawing.Font("Segoe UI", 9.75F);
@@ -389,8 +390,8 @@
                // 
                // btnNavigationPanel
                // 
-               this.btnNavigationPanel.Activecolor = System.Drawing.Color.SeaGreen;
-               this.btnNavigationPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+               this.btnNavigationPanel.Activecolor = System.Drawing.Color.Brown;
+               this.btnNavigationPanel.BackColor = System.Drawing.Color.Brown;
                this.btnNavigationPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
                this.btnNavigationPanel.BorderRadius = 0;
                this.btnNavigationPanel.ButtonText = "";
@@ -411,11 +412,11 @@
                this.btnNavigationPanel.Location = new System.Drawing.Point(0, 0);
                this.btnNavigationPanel.Margin = new System.Windows.Forms.Padding(5);
                this.btnNavigationPanel.Name = "btnNavigationPanel";
-               this.btnNavigationPanel.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-               this.btnNavigationPanel.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+               this.btnNavigationPanel.Normalcolor = System.Drawing.Color.Brown;
+               this.btnNavigationPanel.OnHovercolor = System.Drawing.Color.Brown;
                this.btnNavigationPanel.OnHoverTextColor = System.Drawing.Color.White;
                this.btnNavigationPanel.selected = false;
-               this.btnNavigationPanel.Size = new System.Drawing.Size(236, 49);
+               this.btnNavigationPanel.Size = new System.Drawing.Size(248, 49);
                this.btnNavigationPanel.TabIndex = 6;
                this.btnNavigationPanel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
                this.btnNavigationPanel.Textcolor = System.Drawing.Color.White;
@@ -424,12 +425,12 @@
                // 
                // btnAccountProfile
                // 
-               this.btnAccountProfile.Activecolor = System.Drawing.Color.SeaGreen;
+               this.btnAccountProfile.Activecolor = System.Drawing.Color.Brown;
                this.btnAccountProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-               this.btnAccountProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+               this.btnAccountProfile.BackColor = System.Drawing.Color.Brown;
                this.btnAccountProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
                this.btnAccountProfile.BorderRadius = 0;
-               this.btnAccountProfile.ButtonText = "     Thông Tin Cá Nhân";
+               this.btnAccountProfile.ButtonText = "         Thông Tin Cá Nhân";
                this.btnAccountProfile.Cursor = System.Windows.Forms.Cursors.Hand;
                this.btnAccountProfile.DisabledColor = System.Drawing.Color.Gray;
                this.btnAccountProfile.Iconcolor = System.Drawing.Color.Transparent;
@@ -447,13 +448,13 @@
                this.btnAccountProfile.Location = new System.Drawing.Point(4, 555);
                this.btnAccountProfile.Margin = new System.Windows.Forms.Padding(5);
                this.btnAccountProfile.Name = "btnAccountProfile";
-               this.btnAccountProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-               this.btnAccountProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+               this.btnAccountProfile.Normalcolor = System.Drawing.Color.Brown;
+               this.btnAccountProfile.OnHovercolor = System.Drawing.Color.Brown;
                this.btnAccountProfile.OnHoverTextColor = System.Drawing.Color.White;
                this.btnAccountProfile.selected = false;
                this.btnAccountProfile.Size = new System.Drawing.Size(253, 49);
                this.btnAccountProfile.TabIndex = 5;
-               this.btnAccountProfile.Text = "     Thông Tin Cá Nhân";
+               this.btnAccountProfile.Text = "         Thông Tin Cá Nhân";
                this.btnAccountProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
                this.btnAccountProfile.Textcolor = System.Drawing.Color.White;
                this.btnAccountProfile.TextFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -461,12 +462,12 @@
                // 
                // btnIntroduce
                // 
-               this.btnIntroduce.Activecolor = System.Drawing.Color.SeaGreen;
+               this.btnIntroduce.Activecolor = System.Drawing.Color.Brown;
                this.btnIntroduce.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-               this.btnIntroduce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+               this.btnIntroduce.BackColor = System.Drawing.Color.Brown;
                this.btnIntroduce.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
                this.btnIntroduce.BorderRadius = 0;
-               this.btnIntroduce.ButtonText = "      Giới Thiệu";
+               this.btnIntroduce.ButtonText = "          Giới Thiệu";
                this.btnIntroduce.Cursor = System.Windows.Forms.Cursors.Hand;
                this.btnIntroduce.DisabledColor = System.Drawing.Color.Gray;
                this.btnIntroduce.Iconcolor = System.Drawing.Color.Transparent;
@@ -484,13 +485,13 @@
                this.btnIntroduce.Location = new System.Drawing.Point(0, 668);
                this.btnIntroduce.Margin = new System.Windows.Forms.Padding(5);
                this.btnIntroduce.Name = "btnIntroduce";
-               this.btnIntroduce.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-               this.btnIntroduce.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+               this.btnIntroduce.Normalcolor = System.Drawing.Color.Brown;
+               this.btnIntroduce.OnHovercolor = System.Drawing.Color.Brown;
                this.btnIntroduce.OnHoverTextColor = System.Drawing.Color.White;
                this.btnIntroduce.selected = false;
                this.btnIntroduce.Size = new System.Drawing.Size(257, 49);
                this.btnIntroduce.TabIndex = 2;
-               this.btnIntroduce.Text = "      Giới Thiệu";
+               this.btnIntroduce.Text = "          Giới Thiệu";
                this.btnIntroduce.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
                this.btnIntroduce.Textcolor = System.Drawing.Color.White;
                this.btnIntroduce.TextFont = new System.Drawing.Font("Segoe UI", 9.75F);
@@ -552,30 +553,30 @@
                this.panelLeft.ResumeLayout(false);
                this.ResumeLayout(false);
 
-          }
+        }
 
-          #endregion
+        #endregion
 
-          private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
-          private Bunifu.Framework.UI.BunifuGradientPanel panelLeft;
-          private System.Windows.Forms.Panel panelRight;
-          private MetroFramework.Controls.MetroTile titleBookRoom;
-          private Bunifu.Framework.UI.BunifuImageButton btnClose;
-          private System.Windows.Forms.Label label2;
-          private MetroFramework.Controls.MetroTile titleManageRoom;
-          private MetroFramework.Controls.MetroTile metroTile2;
-          private MetroFramework.Controls.MetroTile metroTile8;
-          private MetroFramework.Controls.MetroTile titlePay;
-          private MetroFramework.Controls.MetroTile titleRecieveRoom;
-          private MetroFramework.Controls.MetroTile title;
-          private MetroFramework.Controls.MetroTile metroTile16;
-          private MetroFramework.Controls.MetroTile metroTile13;
-          private MetroFramework.Controls.MetroTile metroTile17;
-          private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-          private Bunifu.Framework.UI.BunifuFlatButton btnAccountProfile;
-          private Bunifu.Framework.UI.BunifuFlatButton btnIntroduce;
-          private Bunifu.Framework.UI.BunifuFlatButton btnNavigationPanel;
-          private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
-          private Bunifu.Framework.UI.BunifuFlatButton btnLogOut;
-     }
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private Bunifu.Framework.UI.BunifuGradientPanel panelLeft;
+        private System.Windows.Forms.Panel panelRight;
+        private MetroFramework.Controls.MetroTile titleBookRoom;
+        private Bunifu.Framework.UI.BunifuImageButton btnClose;
+        private System.Windows.Forms.Label label2;
+        private MetroFramework.Controls.MetroTile titleManageRoom;
+        private MetroFramework.Controls.MetroTile metroTile2;
+        private MetroFramework.Controls.MetroTile metroTile8;
+        private MetroFramework.Controls.MetroTile titlePay;
+        private MetroFramework.Controls.MetroTile titleRecieveRoom;
+        private MetroFramework.Controls.MetroTile title;
+        private MetroFramework.Controls.MetroTile metroTile16;
+        private MetroFramework.Controls.MetroTile metroTile13;
+        private MetroFramework.Controls.MetroTile metroTile17;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnAccountProfile;
+        private Bunifu.Framework.UI.BunifuFlatButton btnIntroduce;
+        private Bunifu.Framework.UI.BunifuFlatButton btnNavigationPanel;
+        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnLogOut;
+    }
 }

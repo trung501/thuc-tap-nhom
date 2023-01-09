@@ -13,11 +13,11 @@ using System.Windows.Forms;
 
 namespace HotelManager
 {
-
+    
     public partial class fReceiveRoom : Form
     {
-        List<int> ListIDCustomer = new List<int>();
-        int IDBookRoom = -1;
+        List<int> ListIDCustomer=new List<int>();
+        int IDBookRoom=-1;
         DateTime dateCheckIn;
         public fReceiveRoom(int idBookRoom)
         {
@@ -30,7 +30,7 @@ namespace HotelManager
         {
             InitializeComponent();
             LoadData();
-
+          
         }
         public void LoadData()
         {
@@ -59,12 +59,12 @@ namespace HotelManager
             txbFullName.Text = dataRow["FullName"].ToString();
             txbIDCard.Text = dataRow["IDCard"].ToString();
             txbRoomTypeName.Text = dataRow["RoomTypeName"].ToString();
-            cbRoomType.Text = dataRow["RoomTypeName"].ToString();//*
+            cbRoomType.Text= dataRow["RoomTypeName"].ToString();//*
             txbDateCheckIn.Text = dataRow["DateCheckIn"].ToString().Split(' ')[0];
             dateCheckIn = (DateTime)dataRow["DateCheckIn"];
             txbDateCheckOut.Text = dataRow["DateCheckOut"].ToString().Split(' ')[0];
-            txbAmountPeople.Text = dataRow["LimitPerson"].ToString();
-            txbPrice.Text = dataRow["Price"].ToString();
+            txbAmountPeople.Text= dataRow["LimitPerson"].ToString();
+            txbPrice.Text= dataRow["Price"].ToString();
         }
         public bool InsertReceiveRoom(int idBookRoom, int idRoom)
         {
@@ -104,7 +104,7 @@ namespace HotelManager
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (txbIDBookRoom.Text != string.Empty)
+            if(txbIDBookRoom.Text!=string.Empty)
             {
                 if (IsIDBookRoomExists(int.Parse(txbIDBookRoom.Text)))
                 {
@@ -112,7 +112,7 @@ namespace HotelManager
                     ShowBookRoomInfo(int.Parse(txbIDBookRoom.Text));
                 }
                 else
-                    MessageBox.Show("Mã đặt phòng không tồn tại.\nVui lòng nhập lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   MessageBox.Show( "Mã đặt phòng không tồn tại.\nVui lòng nhập lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txbIDBookRoom.Text = string.Empty;
             }
         }
@@ -158,7 +158,7 @@ namespace HotelManager
                             MessageBox.Show("Tạo phiếu nhận phòng thất bại.\nVui lòng nhập lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
-                        MessageBox.Show("Ngày nhận phòng không hợp lệ.\nVui lòng nhập lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show( "Ngày nhận phòng không hợp lệ.\nVui lòng nhập lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ClearData();
                     LoadReceiveRoomInfo();
                 }

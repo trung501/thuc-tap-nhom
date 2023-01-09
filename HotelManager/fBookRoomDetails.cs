@@ -16,7 +16,7 @@ namespace HotelManager
     {
         int idBookRoom;
         string idCard;
-        public fBookRoomDetails(int _idBookRoom, string _idCard)
+        public fBookRoomDetails(int _idBookRoom,string _idCard)
         {
             idBookRoom = _idBookRoom;
             idCard = _idCard;
@@ -72,6 +72,10 @@ namespace HotelManager
             int idCustomerType = (cbCustomerType.SelectedItem as CustomerType).Id;
             CustomerDAO.Instance.UpdateCustomer(CustomerDAO.Instance.GetInfoByIdCard(idCard).Id, txbFullName.Text, txbIDCard.Text, idCustomerType, int.Parse(txbPhoneNumber.Text), dpkDateOfBirth.Value, txbAddress.Text, cbSex.Text, cbNationality.Text);
         }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
 
         private void btnClose__Click(object sender, EventArgs e)
         {
@@ -107,7 +111,7 @@ namespace HotelManager
                 if (!IsIdCardExists(txbIDCard.Text) || txbIDCard.Text == idCard)
                 {
                     UpdateCustomer();
-
+                    
                 }
                 else
                     MessageBox.Show("Thẻ căn cước/ CMND không hợp lệ.\nVui lòng nhập lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -116,7 +120,7 @@ namespace HotelManager
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             MessageBox.Show("Cập nhật thông tin khách hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LoadData();
-
+            
         }
 
         private void txbPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
@@ -134,7 +138,7 @@ namespace HotelManager
 
         private void bunifuThinButton23_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Xóa khách hàng dẫn đến phiếu đặt phòng cũng bị xóa!\nBạn có muốn tiếp tục?", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            if(MessageBox.Show("Xóa khách hàng dẫn đến phiếu đặt phòng cũng bị xóa!\nBạn có muốn tiếp tục?","Cảnh báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning)==DialogResult.OK)
             {
                 if (BookRoomDAO.Instance.IsIDBookRoomExists(idBookRoom))
                 {

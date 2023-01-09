@@ -14,7 +14,12 @@ namespace HotelManager
         [STAThread]
         static void Main()
         {
-           
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new fAccess());
+
+            //Application.Run(new fPrintBill(1,19));
+            Application.Run(new fLogin());
         }
     }
 }

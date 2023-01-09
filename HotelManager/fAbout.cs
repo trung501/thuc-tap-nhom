@@ -10,26 +10,21 @@ using System.Windows.Forms;
 
 namespace HotelManager
 {
-     public partial class fAbout : Form
-     {
-          public fAbout()
-          {
-               InitializeComponent();
-          }
+    public partial class fAbout : Form
+    {
+        public fAbout()
+        {
+            InitializeComponent();
+        }
 
-          private void btnClose_Click(object sender, EventArgs e)
-          {
-               Close();
-          }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
 
-          private void bunifuThinButton25_Click(object sender, EventArgs e)
-          {
-               Close();
-          }
-
-          private void label1_Click(object sender, EventArgs e)
-          {
-
-          }
-     }
+        private void bunifuThinButton25_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+    }
 }

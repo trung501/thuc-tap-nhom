@@ -40,7 +40,7 @@ namespace HotelManager
             DataTable table = GetFullCustomerType();
             comboBoxCustomerType.DataSource = table;
             comboBoxCustomerType.DisplayMember = "Name";
-            if (table.Rows.Count > 0)
+            if(table.Rows.Count > 0)
                 comboBoxCustomerType.SelectedIndex = 0;
         }
         #endregion
@@ -69,7 +69,7 @@ namespace HotelManager
                     break;
             }
             if (check)
-                MessageBox.Show("Xuất file thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show( "Xuất file thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
                 MessageBox.Show("Lỗi (Cần cài đặt Office)", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
@@ -95,7 +95,7 @@ namespace HotelManager
         }
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có muốn cập nhật khách hàng này không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+            DialogResult result =MessageBox.Show( "Bạn có muốn cập nhật khách hàng này không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
             if (result == DialogResult.OK)
                 if (CheckDate())
                 {
@@ -103,7 +103,7 @@ namespace HotelManager
                     comboboxID.Focus();
                 }
                 else
-                    MessageBox.Show("Ngày sinh phải nhỏ hơn ngày hiện tại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   MessageBox.Show( "Ngày sinh phải nhỏ hơn ngày hiện tại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
         private void BtnSearch_Click(object sender, EventArgs e)
@@ -142,9 +142,9 @@ namespace HotelManager
         }
         private void InsertCustomer()
         {
-            if (!CheckFillInText(new Control[] { txbPhoneNumber, txbFullName, txbIDCard, txbNationality, txbAddress, comboBoxCustomerType }))
+            if (!CheckFillInText(new Control[] { txbPhoneNumber, txbFullName, txbIDCard, txbNationality, txbAddress, comboBoxCustomerType}))
             {
-                MessageBox.Show("Không được để trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show( "Không được để trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             try
@@ -152,7 +152,7 @@ namespace HotelManager
                 Customer customer = GetCustomerNow();
                 if (CustomerDAO.Instance.InsertCustomer(customer))
                 {
-                    MessageBox.Show("Thêm thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show( "Thêm thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (btnCancel.Visible == false)
                         LoadFullCustomer(GetFullCustomer());
                     else
@@ -160,23 +160,23 @@ namespace HotelManager
                     comboboxID.SelectedIndex = dataGridViewCustomer.RowCount - 1;
                 }
                 else
-                    MessageBox.Show("Khách Hàng đã tồn tại\nTrùng số chứng minh nhân dân", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show( "Khách Hàng đã tồn tại\nTrùng số chứng minh nhân dân", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
             catch
             {
-                MessageBox.Show("Lỗi thêm khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show( "Lỗi thêm khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void UpdateCustomer()
         {
-            if (comboboxID.Text == string.Empty)
+            if(comboboxID.Text == string.Empty)
             {
-                MessageBox.Show("Khách hàng này chưa tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show( "Khách hàng này chưa tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
             else
             if (!CheckFillInText(new Control[] { txbPhoneNumber, txbFullName, txbIDCard, txbNationality, txbAddress, comboBoxCustomerType }))
             {
-                MessageBox.Show("Không được để trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show( "Không được để trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
@@ -186,25 +186,25 @@ namespace HotelManager
                 {
                     Customer customerNow = GetCustomerNow();
                     if (customerNow.Equals(customerPre))
-                        MessageBox.Show("Bạn chưa thay đổi dữ liệu", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show( "Bạn chưa thay đổi dữ liệu", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     else
                     {
                         bool check = CustomerDAO.Instance.UpdateCustomer(customerNow, customerPre);
                         if (check)
                         {
-                            MessageBox.Show("Cập nhật thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show( "Cập nhật thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             groupCustomer.Tag = customerNow;
                             int index = dataGridViewCustomer.SelectedRows[0].Index;
                             LoadFullCustomer(GetFullCustomer());
                             comboboxID.SelectedIndex = index;
                         }
                         else
-                            MessageBox.Show("Khách hàng này đã tồn tại(Trùng số chứng minh nhân dân)", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                            MessageBox.Show( "Khách hàng này đã tồn tại(Trùng số chứng minh nhân dân)", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     }
                 }
                 catch
                 {
-                    MessageBox.Show("Lỗi câp nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show( "Lỗi câp nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -229,11 +229,11 @@ namespace HotelManager
                 txbIDCard.Text = row.Cells["colIDCard"].Value.ToString();
                 txbNationality.Text = row.Cells["colNationality"].Value.ToString();
                 txbPhoneNumber.Text = row.Cells["colPhone"].Value.ToString();
-                comboBoxCustomerType.SelectedIndex = (int)row.Cells["colIdCustomerType"].Value - 1;
+                comboBoxCustomerType.SelectedIndex =(int) row.Cells["colIdCustomerType"].Value - 1;
                 comboBoxSex.SelectedItem = row.Cells["colSex"].Value;
                 datepickerDateOfBirth.Value = (DateTime)row.Cells["colDateOfBirth"].Value;
-                Customer customer = new Customer(((DataRowView)row.DataBoundItem).Row);
-                groupCustomer.Tag = customer;
+                Customer customer = new Customer(((DataRowView) row.DataBoundItem).Row);
+                groupCustomer.Tag = customer;              
             }
         }
         private void Search()
@@ -256,7 +256,7 @@ namespace HotelManager
                 customer.Id = int.Parse(comboboxID.Text);
             customer.IdCard = txbIDCard.Text;
             int id = comboBoxCustomerType.SelectedIndex;
-            customer.IdCustomerType = (int)((DataTable)comboBoxCustomerType.DataSource).Rows[id]["id"];
+            customer.IdCustomerType = (int)((DataTable) comboBoxCustomerType.DataSource).Rows[id]["id"];
             customer.Name = txbFullName.Text;
             customer.Sex = comboBoxSex.Text;
             customer.PhoneNumber = int.Parse(txbPhoneNumber.Text);
@@ -355,15 +355,11 @@ namespace HotelManager
         {
             LoadFullCustomer(GetFullCustomer());
         }
-        private void FCustomer_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            LoadFullCustomer(GetFullCustomer());
-        }
-        #endregion
+          #endregion
 
-        private void toolStripLabel1_Click_1(object sender, EventArgs e)
-        {
+          private void bindingNavigatorCountItem_Click(object sender, EventArgs e)
+          {
 
-        }
-    }
+          }
+     }
 }
