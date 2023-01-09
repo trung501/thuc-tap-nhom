@@ -2,20 +2,18 @@
 
 🏨🚪🛌🛎️ Ứng dụng quản lý khách sạn sử dụng C#, SQL SERVER
 
-![Hình ảnh demo sản phẩm](/images/mainscreen.png)
+![](Image/trangChu.jpg)
 
 ## Nội dung
 
-* [Giới thiệu](#Thao-tác)
+* [Giới thiệu](#Giới-thiệu)
 * [Tính năng](#Tính-năng)
 * [Môi trường](#Môi-trường)
 * [Cài đặt](#Cài-đặt)
 * [Thao tác](#Thao-tác)
+* [Sử dụng](#Sử-dụng)
 * [Tài liệu tham khảo](#Tài-liệu-tham-khảo)
 * [Bugs và các vấn đề](#Bugs-và-các-vấn-đề)
-* [Ảnh chụp màn hình](#Ảnh-chụp-màn-hình)
-* [Tác giả](#Tác-giả)
-* [Giấy phép](#Giấy-phép)
 
 ## Giới thiệu
 
@@ -33,6 +31,11 @@
 * Quản lý dịch vụ và loại dịch vụ
 * Quản lý tài khoản
 * Báo cáo 
+
+## Môi trường
+
+* [Visual Studio 2019](https://visualstudio.microsoft.com/fr/downloads/?rr=https%3A%2F%2Fwww.google.com.vn%2F)
+* [SQL Server 2019](https://www.microsoft.com/en-us/sql-server/sql-server-2019)
 
 ## Cài đặt
 
@@ -62,12 +65,80 @@ với tên server tương ứng
 * Lễ tân
 
   username: nhanviendatphong
-  password: 123456\
+  password: 123456
 
-## Môi trường
+## Thao tác
 
-* [Visual Studio 2019](https://visualstudio.microsoft.com/fr/downloads/?rr=https%3A%2F%2Fwww.google.com.vn%2F)
-* [SQL Server 2019](https://www.microsoft.com/en-us/sql-server/sql-server-2019)
+* Đăng nhập bằng một trong các quyền admin, staff, receptionist.
+* Trong form trang chủ lựa chọn các chức năng: Đặt phòng, nhận phòng, thống kê doanh thu, quản lí nhân viên, quản lí phòng, quản lí hóa đơn, quản lí dịch vụ, quy định, quản lí khách hàng, sử dụng dịch vụ và thanh toán.
+* Trong form quản lý phòng: Thêm sửa xoá phòng hay thay đổi trạng thái phòng.
+* Form quản lý khách hàng: quản lý thông tin khách hàng thuê phòng
+* Form quản lý nhân viên: Thêm, sửa, xóa nhân viên, quản lý quyền truy cập của nhân viên.
+* Form sử dụng dịch vụ: lựa chọn dịch vụ và thanh toán.
+* Form đặt phòng: quản lí đặt phòng và xem thông tin khách hàng đặt phòng trước.
+* Form nhận phòng: Xác nhận nhận phòng và thông tin khách hàng nhận phòng.
+* Form quy định: Quản lí các quy định của khách sạn.
+* Ngoài ra người sử dụng có thể cập nhật thông tin cá nhân ở Form Thông tin cá nhân.
+
+## Sử dụng
+
+Tai liệu hỗ trợ việc sử dụng C# [documentation](https://docs.microsoft.com/en-us/dotnet/csharp/).
+
+* Để sử dụng được phần mềm, phải tiến hành đăng nhập:
+
+  ![](Image/dangNhap.jpg)
+
+* Sau khi đăng nhập, màn hình sẽ hiện lên trang chủ. Tùy vào quyền đăng nhập mà có thể hoặc không thể thực hiện các chức năng ở trang chủ.
+
+  ![](Image/trangChu.jpg)
+
+* Giao diện đặt phòng
+
+  ![](Image/datPhong.jpg)
+
+* Giao diện nhận phòng
+
+  ![](Image/nhanPhong.jpg)
+
+* Giao diện quản lí phòng
+
+  ![](Image/qlPhong.jpg)
+
+  ![](Image/themPhong.jpg)
+
+* Giao diện quản lí nhân viên
+
+  ![](Image/qlNV.jpg)
+
+  ![](Image/themNV.jpg)
+
+* Giao diện quản lí hóa đơn
+
+  ![](Image/qlHoaDon.jpg)
+
+  ![](Image/chiTietHoaDon.jpg)
+
+  ![](Image/inHoaDon.jpg)
+
+* Giao diện quản lí khách hàng
+
+  ![](Image/qlKhachHang.jpg)
+
+  ![](Image/themKhachHang.jpg)
+
+* Quản lí dịch vụ
+
+  ![](Image/qlDichVu.jpg)
+
+* Giao diện quy định
+
+  ![](Image/quyDinh.jpg)
+
+* Giao diện thông tin cá nhân
+
+  ![](Image/thongTinCaNhan.jpg)
+
+
 
 ## Tài liệu tham khảo
 
@@ -77,40 +148,3 @@ Tai liệu hỗ trợ việc sử dụng C# [documentation](https://docs.microso
 
 Bạn có câu hỏi hoặc vấn đề với dự án? [Đặt câu hỏi](https://github.com/trung501/thuc-tap-nhom/issues) tại đây trên Github.
 
-## Ảnh chụp màn hình
-
-* `Đăng nhập`
-
-![Đăng nhập](/images/login.png)
-
-* `Đặt phòng`
-
-![Đặt phòng](/images/datphong.png)
-
-* `Nhận phòng`
-
-![Nhận phòng](/images/nhanphong.png)
-
-* `Đặt dịch vụ và thanh toán`
-
-![Đặt dịch vụ và thanh toán](/images/dichvu-thanhtoan.png)
-
-* `Quản lý nhân viên`
-
-![Quản lý nhân viên](/images/nhanvien.png)
-
-## Tính năng đang phát triển
-*Thống kê doanh thu*
-
-
-## Tác giả
-
-* **Trần Bảo Trung** - [trung501 (Trung Trần) (github.com)](https://github.com/trung501)
-* **Đinh Thị Thu Uyên** - [DinhUyen (github.com)](https://github.com/DinhUyen)
-* **Phạm Đình Khương Duy** - [[khuongduyktqs (Khương Duy ) (github.com)](https://github.com/khuongduyktqs)](https://github.com/NguyenPhuLap3112)
-* **Hồ Nguyễn Nguyên** - [HNN510 (github.com)](https://github.com/HNN510)
-* **An Thanh Tú** - [ATT21072001 (github.com)](https://github.com/ATT21072001)
-
-## Giấy phép
-
-[MIT](https://opensource.org/licenses/MIT)
