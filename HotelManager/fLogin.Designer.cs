@@ -1,33 +1,33 @@
 ﻿namespace HotelManager
 {
-     partial class fLogin
-     {
-          /// <summary>
-          /// Required designer variable.
-          /// </summary>
-          private System.ComponentModel.IContainer components = null;
+    partial class fLogin
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-          /// <summary>
-          /// Clean up any resources being used.br
-          /// </summary>
-          /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-          protected override void Dispose(bool disposing)
-          {
-               if (disposing && (components != null))
-               {
-                    components.Dispose();
-               }
-               base.Dispose(disposing);
-          }
+        /// <summary>
+        /// Clean up any resources being used.br
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-          #region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-          /// <summary>
-          /// Required method for Designer support - do not modify
-          /// the contents of this method with the code editor.
-          /// </summary>
-          private void InitializeComponent()
-          {
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
                this.components = new System.ComponentModel.Container();
                System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fLogin));
                this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -280,21 +280,21 @@
                this.ResumeLayout(false);
                this.PerformLayout();
 
-          }
+        }
 
-          #endregion
-          private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
-          private System.Windows.Forms.Label label2;
-          private System.Windows.Forms.Label label1;
-          private System.Windows.Forms.Label label4;
-          private Bunifu.Framework.UI.BunifuMetroTextbox txbUserName;
-          private Bunifu.Framework.UI.BunifuMetroTextbox txbPassWord;
-          private System.Windows.Forms.PictureBox pictureBox2;
-          private Bunifu.Framework.UI.BunifuImageButton btnClose;
-          private Bunifu.Framework.UI.BunifuThinButton2 btnLogin;
-          private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
-          private Bunifu.Framework.UI.BunifuThinButton2 btnExit_;
-          private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
+        #endregion
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txbUserName;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txbPassWord;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private Bunifu.Framework.UI.BunifuImageButton btnClose;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnLogin;
+        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnExit_;
+        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
           private System.Windows.Forms.PictureBox pictureBox1;
      }
 }

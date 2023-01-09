@@ -42,11 +42,8 @@ namespace HotelManager.DAO
             DataRow data = DataProvider.Instance.ExecuteQuery(query, new object[] { idRoomType }).Rows[0];
             return Convert.ToInt32((double)data["Value"]);
         }
-        public static RoomTypeDAO Instance
-        {
-            get { if (instance == null) instance = new RoomTypeDAO(); return instance; }
-            private set => instance = value;
-        }
+        public static RoomTypeDAO Instance { get { if (instance == null) instance = new RoomTypeDAO(); return instance; }
+            private set => instance = value; }
         public RoomTypeDAO() { }
         public RoomType LoadRoomTypeInfo(int id)
         {
@@ -70,7 +67,7 @@ namespace HotelManager.DAO
         public RoomType GetRoomTypeByIdRoom(int idRoom)
         {
             string query = "USP_GetRoomTypeByIdRoom @idRoom";
-            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { idRoom });
+            DataTable data = DataProvider.Instance.ExecuteQuery(query,new object[] { idRoom });
             RoomType roomType = new RoomType(data.Rows[0]);
             return roomType;
         }
@@ -82,5 +79,6 @@ namespace HotelManager.DAO
             return roomType;
         }
         #endregion
+
     }
 }

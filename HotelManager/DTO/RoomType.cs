@@ -26,7 +26,7 @@ namespace HotelManager.DTO
             this.Id = (int)row["id"];
             this.Name = row["name"].ToString();
             this.Price = (int)row["price"];
-            this.LimitPerson = (int)row["limitPerson"];
+            this.LimitPerson= (int)row["limitPerson"];
         }
         public bool Equals(RoomType roomTypePre)
         {

@@ -10,36 +10,75 @@ namespace HotelManager.DAO
 {
     public class RoomDAO
     {
-        private int id;
-        private string name;
-        private int price;
-        private int limitPerson;
-        public RoomType() { }
-        public RoomType(int id, string name, int price, int limitPerson)
+        private static RoomDAO instance;
+        #region Method
+
+        internal DataTable LoadFullRoom()
         {
-            this.Id = id;
-            this.Name = name;
-            this.Price = price;
-            this.LimitPerson = limitPerson;
+            return DataProvider.Instance.ExecuteQuery("USP_LoadFullRoom");
         }
-        public RoomType(DataRow row)
+        internal bool InsertRoom(Room roomNow)
         {
-            this.Id = (int)row["id"];
-            this.Name = row["name"].ToString();
-            this.Price = (int)row["price"];
-            this.LimitPerson = (int)row["limitPerson"];
+            return InsertRoom(roomNow.Name, roomNow.IdRoomType, roomNow.IdStatusRoom);
         }
-        public bool Equals(RoomType roomTypePre)
+        internal bool InsertRoom(string roomName, int idRoomType, int idStatusRoom)
         {
-            if (roomTypePre == null) return false;
-            if (this.name != roomTypePre.name) return false;
-            if (this.price != roomTypePre.price) return false;
-            if (this.limitPerson != roomTypePre.limitPerson) return false;
-            return true;
+            string query = "USP_InsertRoom @nameRoom , @idRoomType , @idStatusRoom";
+            return DataProvider.Instance.ExecuteNoneQuery(query, new object[] { roomName, idRoomType, idStatusRoom }) > 0;
         }
-        public int Id { get => id; set => id = value; }
-        public string Name { get => name; set => name = value; }
-        public int Price { get => price; set => price = value; }
-        public int LimitPerson { get => limitPerson; set => limitPerson = value; }
+        internal bool UpdateCustomer(Room roomNow)
+        {
+            string query = "USP_UpdateRoom  @id , @nameRoom , @idRoomType , @idStatusRoom";
+            return DataProvider.Instance.ExecuteNoneQuery(query, new object[] { roomNow.Id, roomNow.Name, roomNow.IdRoomType, roomNow.IdStatusRoom }) > 0;
+        }
+        internal DataTable Search(string text, int id)
+        {
+            string query = "USP_SearchRoom @string , @id";
+            return DataProvider.Instance.ExecuteQuery(query, new object[] { text, id });
+        }
+        public List<Room> LoadEmptyRoom(int idRoomType)
+        {
+            List<Room> rooms = new List<Room>();
+            string query = "USP_LoadEmptyRoom @idRoomType";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query,new object[] { idRoomType });
+            foreach (DataRow item in data.Rows)
+            {
+                Room room = new Room(item);
+                rooms.Add(room);
+            }
+            return rooms;
+        }
+        public List<Room> LoadListFullRoom()
+        {
+            string query = "USP_LoadListFullRoom @getToday";
+            List<Room> rooms = new List<Room>();
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] {DateTime.Now.Date });
+            foreach (DataRow item in data.Rows)
+            {
+                Room room = new Room(item);
+                rooms.Add(room);
+            }
+            return rooms;
+        }
+        public int GetPeoples(int idBill)
+        {
+            string query = "USP_GetPeoples @idBill";
+            return (int)DataProvider.Instance.ExecuteScalar(query, new object[] { idBill })+1;
+        }
+        public int GetIdRoomFromReceiveRoom(int idReceiveRoom)
+        {
+            string query = "USP_GetIDRoomFromReceiveRoom @idReceiveRoom";
+            return (int)DataProvider.Instance.ExecuteScalar(query, new object[] { idReceiveRoom });
+        }
+        public bool UpdateStatusRoom(int idRoom)
+        {
+            string query = "USP_UpdateStatusRoom @idRoom";
+            return DataProvider.Instance.ExecuteNoneQuery(query, new object[] { idRoom }) > 0;
+        }
+        #endregion
+
+        public static RoomDAO Instance { get {if(instance==null) instance=new RoomDAO();return instance; }
+            private set => instance = value; }
+        private RoomDAO() { }
     }
 }

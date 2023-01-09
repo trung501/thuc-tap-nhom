@@ -65,13 +65,13 @@ namespace HotelManager
                             break;
                     }
                     if (check)
-                        MessageBox.Show("Xuất thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show( "Xuất thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
-                        MessageBox.Show("Lỗi xuất thất bại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show( "Lỗi xuất thất bại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 catch
                 {
-                    MessageBox.Show("Lỗi (Cần cài đặt Office)", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show( "Lỗi (Cần cài đặt Office)", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -88,12 +88,12 @@ namespace HotelManager
 
         #region Chart
         private void DrawChart(BindingSource source)
-        {
+        {   
             chartReport.DataSource = source;
             chartReport.DataBind();
             foreach (DataPoint item in chartReport.Series[0].Points)
             {
-                if (item.YValues[0] == 0)
+                if(item.YValues[0] == 0)
                 {
                     item.Label = " ";
                 }
@@ -135,11 +135,6 @@ namespace HotelManager
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void numericYear_ValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

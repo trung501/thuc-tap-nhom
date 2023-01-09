@@ -30,7 +30,7 @@ namespace HotelManager
         }
         public void LoadRoomType()
         {
-            cbRoomType.DataSource = RoomTypeDAO.Instance.LoadListRoomType();
+            cbRoomType.DataSource= RoomTypeDAO.Instance.LoadListRoomType();
             cbRoomType.DisplayMember = "Name";
         }
         public void LoadRoomTypeInfo(int id)
@@ -39,7 +39,7 @@ namespace HotelManager
             txbRoomTypeID.Text = roomType.Id.ToString();
             txbRoomTypeName.Text = roomType.Name;
             CultureInfo cultureInfo = new CultureInfo("vi-vn");
-            txbPrice.Text = roomType.Price.ToString("c0", cultureInfo);
+            txbPrice.Text = roomType.Price.ToString("c0",cultureInfo);
             txbAmountPeople.Text = roomType.LimitPerson.ToString();
         }
         public void LoadDate()
@@ -145,7 +145,7 @@ namespace HotelManager
                     GetInfoByIdCard(txbIDCardSearch.Text);
                 else
                     MessageBox.Show("Thẻ căn cước/ CMND không tồn tại.\nVui lòng nhập lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }    
         }
         public void ClearData()
         {
@@ -175,8 +175,8 @@ namespace HotelManager
                     }
                 }
                 else
-                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+                    MessageBox.Show( "Vui lòng nhập đầy đủ thông tin.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }   
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -192,7 +192,7 @@ namespace HotelManager
         private void btnDetails_Click(object sender, EventArgs e)
         {
             int idBookRoom = (int)dataGridViewBookRoom.SelectedRows[0].Cells[0].Value;
-            string idCard = dataGridViewBookRoom.SelectedRows[0].Cells[2].Value.ToString();
+            string idCard= dataGridViewBookRoom.SelectedRows[0].Cells[2].Value.ToString();
             fBookRoomDetails f = new fBookRoomDetails(idBookRoom, idCard);
             f.ShowDialog();
             Show();

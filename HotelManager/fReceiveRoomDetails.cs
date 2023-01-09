@@ -27,7 +27,7 @@ namespace HotelManager
             txbIDReceiveRoom.Text = ((int)data["Mã nhận phòng"]).ToString();
             txbRoomName.Text = data["Tên phòng"].ToString();
             txbDateCheckIn.Text = ((DateTime)data["Ngày nhận"]).ToString().Split(' ')[0];
-            txbDateCheckOut.Text = ((DateTime)data["Ngày trả"]).ToString().Split(' ')[0];
+            txbDateCheckOut.Text= ((DateTime)data["Ngày trả"]).ToString().Split(' ')[0];
         }
         public void ShowCustomers(int idReceiveRoom)
         {
@@ -58,7 +58,7 @@ namespace HotelManager
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
         {
-            string idCard = dataGridView.SelectedRows[0].Cells[1].Value.ToString();
+            string idCard =dataGridView.SelectedRows[0].Cells[1].Value.ToString();
             int idCustomer = CustomerDAO.Instance.GetInfoByIdCard(idCard).Id;
             if (idCustomer != CustomerDAO.Instance.GetIDCustomerFromBookRoom(idReceiveRoom))
             {
@@ -82,7 +82,7 @@ namespace HotelManager
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
-            fChangeRoom f = new fChangeRoom(RoomDAO.Instance.GetIdRoomFromReceiveRoom(idReceiveRoom), idReceiveRoom);
+            fChangeRoom f = new fChangeRoom(RoomDAO.Instance.GetIdRoomFromReceiveRoom(idReceiveRoom),idReceiveRoom);
             f.ShowDialog();
             Show();
             ShowReceiveRoom(idReceiveRoom);

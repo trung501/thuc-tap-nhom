@@ -69,5 +69,15 @@ namespace HotelManager.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sanh_the_ritz_carlton_hotel {
+            get {
+                object obj = ResourceManager.GetObject("sanh-the-ritz-carlton-hotel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

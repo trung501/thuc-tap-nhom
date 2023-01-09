@@ -16,7 +16,7 @@ namespace HotelManager.DTO
         private DateTime dateCheckOut;
         private DateTime dateBookRoom;
 
-        public BookRoom(int id, int idCustomer, int idRoomType, DateTime dateCheckIn, DateTime dateCheckOut, DateTime dateBookRoom)
+        public BookRoom(int id, int idCustomer, int idRoomType, DateTime dateCheckIn, DateTime dateCheckOut,DateTime dateBookRoom)
         {
             Id = id;
             IdCustomer = idCustomer;

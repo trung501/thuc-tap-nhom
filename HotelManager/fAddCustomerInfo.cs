@@ -55,7 +55,7 @@ namespace HotelManager
         }
         public void AddIdCustomer(int idCustomer)
         {
-            if (ListIdCustomer.Count != 0)
+            if(ListIdCustomer.Count!=0)
             {
                 bool check = false;
                 foreach (int item in ListIdCustomer)
@@ -66,14 +66,14 @@ namespace HotelManager
                         break;
                     }
                 }
-                if (!check) ListIdCustomer.Add(idCustomer);
+                if(!check) ListIdCustomer.Add(idCustomer);
             }
             else
-                ListIdCustomer.Add(idCustomer);
+            ListIdCustomer.Add(idCustomer);
         }
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
-            if (txbFullName.Text != string.Empty && txbIDCard.Text != string.Empty && txbAddress.Text != string.Empty && cbNationality.Text != string.Empty && txbPhoneNumber.Text != string.Empty)
+            if(txbFullName.Text!=string.Empty&&txbIDCard.Text!=string.Empty&&txbAddress.Text!=string.Empty&&cbNationality.Text!=string.Empty&&txbPhoneNumber.Text!=string.Empty)
             {
                 if (!IsIdCardExists(txbIDCard.Text))
                 {

@@ -22,10 +22,7 @@ namespace HotelManager.DAO
             int count = DataProvider.Instance.ExecuteNoneQuery(query, new object[] { idReceiveRoom, idCustomerOther });
             return count > 0;
         }
-        public static ReceiveRoomDetailsDAO Instance
-        {
-            get { if (instance == null) instance = new ReceiveRoomDetailsDAO(); return instance; }
-            private set => instance = value;
-        }
+        public static ReceiveRoomDetailsDAO Instance { get { if (instance == null) instance = new ReceiveRoomDetailsDAO();return instance; }
+            private set => instance = value; }
     }
 }
