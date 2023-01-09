@@ -199,5 +199,128 @@ namespace HotelManager
                 groupRoom.Tag = room;
             }
         }
+        private void Search()
+        {
+            LoadFullRoom(GetSearchRoom());
+        }
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            txbSearch.Text = txbSearch.Text.Trim();
+            if (txbSearch.Text != string.Empty)
+            {
+                txbNameRoom.Text = string.Empty;
+                btnSearch.Visible = false;
+                btnCancel.Visible = true;
+                Search();
+            }
+        }
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            LoadFullRoom(GetFullRoom());
+            btnCancel.Visible = false;
+            btnSearch.Visible = true;
+        }
+        #endregion
+
+        #region Get Data
+        private DataTable GetFullRoom()
+        {
+            return RoomDAO.Instance.LoadFullRoom();
+        }
+        private DataTable GetFullRoomType()
+        {
+            return RoomTypeDAO.Instance.LoadFullRoomType();
+        }
+        private DataTable GetFullStatusRoom()
+        {
+            return StatusRoomDAO.Instance.LoadFullStatusRoom();
+        }
+        private Room GetRoomNow()
+        {
+            Room room = new Room();
+            if (comboboxID.Text == string.Empty)
+                room.Id = 0;
+            else
+                room.Id = int.Parse(comboboxID.Text);
+            fStaff.Trim(new Bunifu.Framework.UI.BunifuMetroTextbox[] { txbNameRoom });
+            room.Name = txbNameRoom.Text;
+            int index = comboBoxRoomType.SelectedIndex;
+            room.IdRoomType = (int)((DataTable)comboBoxRoomType.DataSource).Rows[index]["id"];
+            index = comboBoxStatusRoom.SelectedIndex;
+            room.IdStatusRoom = (int)((DataTable)comboBoxStatusRoom.DataSource).Rows[index]["id"];
+            return room;
+        }
+        private DataTable GetSearchRoom()
+        {
+            if (int.TryParse(txbSearch.Text, out int id))
+                return RoomDAO.Instance.Search(txbSearch.Text, id);
+            else
+                return RoomDAO.Instance.Search(txbSearch.Text, 0);
+        }
+
+        #endregion
+
+        #region Change
+        private void DataGridViewRoom_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridViewRoom.SelectedRows.Count > 0)
+            {
+                DataGridViewRow row = dataGridViewRoom.SelectedRows[0];
+                ChangeText(row);
+            }
+        }
+        private void ChangePrice(DataTable table)
+        {
+            table.Columns.Add("price_New", typeof(string));
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                table.Rows[i]["price_New"] = ((int)table.Rows[i]["price"]).ToString("C0", CultureInfo.CreateSpecificCulture("vi-VN"));
+            }
+            table.Columns.Remove("price");
+        }
+        private void ComboBoxRoomType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = comboBoxRoomType.SelectedIndex;
+
+            if (((DataTable)comboBoxRoomType.DataSource).Rows[index]["Price"].ToString().Contains("."))
+                return;
+            txbPrice.Text = ((int)((DataTable)comboBoxRoomType.DataSource).Rows[index]["Price"]).ToString("C0", CultureInfo.CreateSpecificCulture("vi-VN"));
+        }
+        #endregion
+
+        #region Enter & leave
+        private void TxbNameRoom_Enter(object sender, EventArgs e)
+        {
+            txbNameRoom.Tag = txbNameRoom.Text;
+        }
+        private void TxbNameRoom_Leave(object sender, EventArgs e)
+        {
+            if (txbNameRoom.Text == string.Empty)
+                txbNameRoom.Text = txbNameRoom.Tag as string;
+        }
+        #endregion
+
+        #region Key
+        private void TxbSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                BtnSearch_Click(sender, null);
+            else
+                if (e.KeyChar == 27 && btnCancel.Visible == true)
+                BtnCancel_Click(sender, null);
+        }
+        private void FRoom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 27 && btnCancel.Visible == true)
+                BtnCancel_Click(sender, null);
+        }
+        #endregion
+
+        #region Close
+        private void FRoom_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            BtnCancel_Click(sender, null);
+        }
+        #endregion
     }
 }
