@@ -154,6 +154,12 @@ namespace HotelManager
         }
         private void btnBookRoom_Click(object sender, EventArgs e)
         {
+            if (!BookRoomDAO.Instance.CheckCanBookRoom(dpkDateCheckIn.Value, dpkDateCheckOut.Value, (cbRoomType.SelectedItem as RoomType).Id))
+            {
+                MessageBox.Show("Hiện tại không còn phòng trong khoảng thời gian này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+                
             if (MessageBox.Show("Bạn có muốn đặt phòng không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (txbIDCard.Text != String.Empty && txbFullName.Text != String.Empty && txbAddress.Text != String.Empty && txbPhoneNumber.Text != String.Empty && cbNationality.Text != String.Empty)

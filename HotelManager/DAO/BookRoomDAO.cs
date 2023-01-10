@@ -23,6 +23,14 @@ namespace HotelManager.DAO
             return DataProvider.Instance.ExecuteQuery(query, new object[] { dateTime });
 
         }
+
+        public bool CheckCanBookRoom(DateTime dateReciveTemp, DateTime dateReturnTemp, int IDRoomType)
+        {
+            string query = "USP_CheckExistEmptyRoom @dateReciveTemp , @dateReturnTemp , @IDRoomType";
+            int rowCount = DataProvider.Instance.ExecuteQuery(query, new object[] { dateReciveTemp, dateReturnTemp, IDRoomType }).Rows.Count;
+            return rowCount > 0;
+        }
+
         public int GetCurrentIDBookRoom(DateTime dateTime)
         {
             string query = "USP_LoadBookRoomsByDate @date";
